@@ -1,0 +1,279 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f4;
+    color: #263b35;
+}
+
+header {
+    background: #153d32;
+    color: white;
+    padding: 20px 7%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar h2 {
+    font-size: 22px;
+}
+
+.navbar span {
+    color: #a8d5b5;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.navbar a:hover {
+    color: #a8d5b5;
+}
+
+.hero {
+    min-height: 500px;
+    background: linear-gradient(
+        rgba(10, 35, 29, 0.55),
+        rgba(10, 35, 29, 0.55)
+    ), url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 50px 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.small-title {
+    color: #438565;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.btn, button {
+    background: #347b58;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 5px;
+}
+
+button:hover, .btn:hover {
+    background: #20583d;
+}
+
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.search-box {
+    margin: 25px 0;
+}
+
+input, select {
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid #ccd5ce;
+    border-radius: 6px;
+    background: white;
+}
+
+.places, .food {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.place, .food-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000012;
+    text-align: left;
+    padding-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.place:hover, .food-card:hover {
+    transform: translateY(-5px);
+}
+
+.place img, .food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.place h3, .food-card h3 {
+    padding: 15px 15px 5px;
+}
+
+.place p, .food-card p {
+    padding: 5px 15px;
+    line-height: 1.6;
+}
+
+.place button {
+    margin: 10px 15px;
+}
+
+.surprise {
+    background: #e2eee5;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.food-section {
+    background: #eaf1e9;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000000e8;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-viewer img {
+    max-width: 85%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.image-viewer span {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.travel-section {
+    background: #eaf1e9;
+}
+
+.travel-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.travel-info div {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.travel-info p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.calculator {
+    background: white;
+    max-width: 500px;
+    margin: 40px auto 0;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.calculator label {
+    display: block;
+    margin-top: 15px;
+}
+
+.calculator input {
+    width: 90%;
+}
+
+footer {
+    background: #153d32;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 2;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+}

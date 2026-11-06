@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Darjeeling</title>
+    <link rel="stylesheet" href="darj.css">
+</head>
+<body>
+<script src="darj.js"></script>
+<header>
+    <nav class="navbar">
+        <h2>EXPLORE <span>DARJEELING</span></h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#places">Destinations</a>
+            <a href="#food">Food</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#travel">Travel</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="small-title">WELCOME TO THE HIMALAYAS</p>
+        <h1>Discover the Magic<br>of Darjeeling</h1>
+        <p>Explore misty mountains, peaceful tea gardens and beautiful places.</p>
+        <a href="#places" class="btn">Explore Destinations</a>
+    </div>
+</section>
+
+<section id="places">
+    <p class="small-title">EXPLORE THE BEAUTY</p>
+    <h2>Discover Amazing Places</h2>
+    <p>Find your next adventure in the Queen of the Hills.</p>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search destinations...">
+
+        <select id="category">
+            <option value="all">All Categories</option>
+            <option value="Hill Station">Hill Stations</option>
+            <option value="Historical">Historical Places</option>
+            <option value="Waterfall">Waterfalls</option>
+        </select>
+
+        <select id="district">
+            <option value="all">All Areas</option>
+            <option value="Darjeeling">Darjeeling</option>
+            <option value="Kurseong">Kurseong</option>
+            <option value="Mirik">Mirik</option>
+        </select>
+    </div>
+
+    <button onclick="showFavorites()">♥ My Favorites</button>
+    <button onclick="showPlaces()">Show All</button>
+
+    <div class="places" id="placeList"></div>
+
+    <div class="surprise">
+        <h3>Feeling Adventurous?</h3>
+        <p>Let us choose a destination for you!</p>
+        <button onclick="randomPlace()">Surprise Me!</button>
+        <p id="randomResult"></p>
+    </div>
+</section>
+
+<section id="food" class="food-section">
+    <p class="small-title">A TASTE OF THE HILLS</p>
+    <h2>Famous Darjeeling Food</h2>
+
+    <div class="food">
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=600" alt="Momos">
+            <h3>Momos</h3>
+            <p>Delicious steamed dumplings served with spicy chutney.</p>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" alt="Thukpa">
+            <h3>Thukpa</h3>
+            <p>A warm noodle soup perfect for the mountain weather.</p>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600" alt="Darjeeling tea">
+            <h3>Darjeeling Tea</h3>
+            <p>Enjoy the famous tea grown in the beautiful hills.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <p class="small-title">MOMENTS IN THE MOUNTAINS</p>
+    <h2>Photo Gallery</h2>
+
+    <div class="gallery">
+        <img src="c:\Users\RIHAN SUBBA\Downloads\images.jpg" alt="Mountain view" onclick="openImage(this.src)">
+        <img src="c:\Users\RIHAN SUBBA\Downloads\tiger-hill-darjeeling-1024x541.webp" alt="Green hills" onclick="openImage(this.src)">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700" alt="Mountain lake" onclick="openImage(this.src)">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700" alt="Mountain landscape" onclick="openImage(this.src)">
+    </div>
+
+    <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+        <span>×</span>
+        <img id="largeImage" src="" alt="Selected gallery image">
+    </div>
+</section>
+
+<section id="travel" class="travel-section">
+    <p class="small-title">PLAN YOUR JOURNEY</p>
+    <h2>Travel Information</h2>
+
+    <div class="travel-info">
+        <div>
+            <h3>✈ Getting Here</h3>
+            <p>Nearest airport: Bagdogra Airport</p>
+            <p>Nearest major railway station: New Jalpaiguri</p>
+        </div>
+
+        <div>
+            <h3>☀ Best Time to Visit</h3>
+            <p>March to May and October to November are popular travel seasons.</p>
+        </div>
+
+        <div>
+            <h3>🏔 Must-Visit Attractions</h3>
+            <p>Tiger Hill, Batasia Loop, Mirik Lake and the Himalayan Mountaineering Institute.</p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h3>Travel Budget Calculator</h3>
+
+        <label>Number of Days</label>
+        <input type="number" id="days" value="3" min="1">
+
+        <label>Number of People</label>
+        <input type="number" id="people" value="2" min="1">
+
+        <label>Daily Budget per Person (₹)</label>
+        <input type="number" id="daily" value="2000" min="0">
+
+        <button onclick="calculateBudget()">Calculate Budget</button>
+        <h3 id="budgetResult"></h3>
+    </div>
+</section>
+
+<footer>
+    <h2>EXPLORE DARJEELING</h2>
+    <p>Discover the mountains. Experience the culture.</p>
+    <p> 2026 Explore Darjeeling</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
